@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<meta name="description" content="NextPlay Cricket Ground near Paramount School, Aduru, Bengaluru, Karnataka 560049. Contact us for cricket ground booking enquiries.">
+
+<title>NextPlay Cricket Ground | Aduru, Bengaluru</title>
+
+<style>
+    :root {
+        --green: #064e3b;
+        --dark-green: #022c22;
+        --light-green: #e9f6ee;
+        --yellow: #f5e928;
+        --white: #ffffff;
+        --text: #10263b;
+        --muted: #536475;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--text);
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1150px;
+        margin: auto;
+    }
+
+    /* Navigation */
+
+    header {
+        background: var(--dark-green);
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 18px 0;
+    }
+
+    .logo {
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        line-height: 1.2;
+    }
+
+    .logo span {
+        color: var(--yellow);
+    }
+
+    .logo small {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 17px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: var(--yellow);
+    }
+
+    /* Buttons */
+
+    .btn {
+        display: inline-block;
+        padding: 12px 21px;
+        background: var(--yellow);
+        color: var(--dark-green);
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .btn:hover {
+        background: #e7d91c;
+    }
+
+    .btn-outline {
+        background: transparent;
+        border: 1px solid white;
+        color: white;
+    }
+
+    .btn-outline:hover {
+        background: white;
+        color: var(--green);
+    }
+
+    .btn-green {
+        background: var(--green);
+        color: white;
+    }
+
+    .btn-green:hover {
+        background: var(--dark-green);
+    }
+
+    /* Homepage banner */
+
+    .hero {
+        min-height: 480px;
+        display: flex;
+        align-items: center;
+        color: white;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(2, 44, 34, 0.94),
+                rgba(2, 44, 34, 0.42)
+            ),
+            url("https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=1800&q=85")
+            center/cover;
+    }
+
+    .hero-content {
+        padding: 75px 0;
+        max-width: 700px;
+    }
+
+    .eyebrow {
+        color: var(--yellow);
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 6vw, 72px);
+        line-height: 1.1;
+        margin: 18px 0;
+    }
+
+    .hero h1 span {
+        color: var(--yellow);
+    }
+
+    .hero p {
+        font-size: 18px;
+        max-width: 600px;
+        margin-bottom: 26px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    /* General sections */
+
+    section {
+        padding: 65px 0;
+    }
+
+    .section-label {
+        color: var(--green);
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-size: clamp(27px, 3vw, 38px);
+        line-height: 1.2;
+        margin: 10px 0 20px;
+    }
+
+    .section-description {
+        color: var(--muted);
+        max-width: 700px;
+    }
+
+    /* About section */
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .about-text p {
+        color: var(--muted);
+    }
+
+    .about-image {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 14px;
+    }
+
+    /* Facilities */
+
+    .facilities {
+        background: #f1f7f3;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+        transition: transform 0.2s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card-icon {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .card h3 {
+        color: var(--green);
+        margin-bottom: 8px;
+    }
+
+    .card p {
+        color: var(--muted);
+        font-size: 14px;
+    }
+
+    /* Photo gallery */
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 25px;
+    }
+
+    .gallery-grid img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+
+    .gallery-grid img:hover {
+        transform: scale(1.02);
+    }
+
+    /* Pricing */
+
+    .pricing {
+        background: var(--light-green);
+    }
+
+    .price-box {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 25px;
+    }
+
+    .price-box p {
+        color: var(--muted);
+    }
+
+    /* Booking section */
+
+    .booking {
+        background: var(--green);
+        color: white;
+        text-align: center;
+    }
+
+    .booking h2 {
+        color: white;
+    }
+
+    .booking p {
+        max-width: 650px;
+        margin: 0 auto 25px;
+        color: #e0eee7;
+    }
+
+    /* Contact section */
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-top: 25px;
+    }
+
+    .contact-card {
+        background: #f1f7f3;
+        padding: 28px;
+        border-radius: 12px;
+    }
+
+    .contact-card p {
+        margin: 12px 0;
+    }
+
+    .contact-card h3 {
+        color: var(--green);
+    }
+
+    .contact-number {
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .contact-number a {
+        color: var(--green);
+        text-decoration: none;
+    }
+
+    .contact-number a:hover {
+        text-decoration: underline;
+    }
+
+    .contact-buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .map {
+        width: 100%;
+        min-height: 320px;
+        border: 0;
+        border-radius: 12px;
+    }
+
+    /* Footer */
+
+    footer {
+        background: var(--dark-green);
+        color: white;
+        text-align: center;
+        padding: 25px 0;
+        font-size: 14px;
+    }
+
+    footer span {
+        color: var(--yellow);
+    }
+
+    /* WhatsApp floating button */
+
+    .whatsapp-float {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 200;
+        background: #25D366;
+        color: white;
+        padding: 13px 19px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Mobile responsive design */
+
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        nav {
+            gap: 12px;
+        }
+
+        .hero {
+            min-height: 430px;
+        }
+
+        .about-grid,
+        .contact-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .map {
+            min-height: 280px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .cards,
+        .gallery-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .gallery-grid img {
+            height: 220px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+        }
+
+        .hero p {
+            font-size: 16px;
+        }
+
+        .contact-buttons .btn {
+            width: 100%;
+        }
+
+        .whatsapp-float {
+            right: 12px;
+            bottom: 12px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- Navigation -->
+
+<header>
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+            NEXT<span>PLAY</span>
+            <small>CRICKET GROUND</small>
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#facilities">Facilities</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+
+            <a href="#" class="btn whatsapp-link">
+                WhatsApp Enquiry
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+    <!-- Homepage banner -->
+
+    <section class="hero" id="home">
+        <div class="container hero-content">
+
+            <div class="eyebrow">
+                PLAY · PRACTICE · COMPETE
+            </div>
+
+            <h1>
+                NextPlay<br>
+                <span>Cricket Ground</span>
+            </h1>
+
+            <p>
+                Your destination for cricket matches, practice
+                sessions, friendly games and tournaments in
+                Aduru, Bengaluru.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#" class="btn whatsapp-link">
+                    🏏 Book Your Ground
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    📍 View Location
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About us -->
+
+    <section id="about">
+        <div class="container about-grid">
+
+            <div class="about-text">
+
+                <div class="section-label">
+                    About Us
+                </div>
+
+                <h2>
+                    Welcome to NextPlay Cricket Ground
+                </h2>
+
+                <p>
+                    Bring your team together for an exciting
+                    game of cricket. NextPlay Cricket Ground
+                    is located near Paramount School in Aduru,
+                    Bengaluru.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Contact us to enquire about ground
+                    availability, facilities and booking rates.
+                    We look forward to welcoming your team!
+                </p>
+
+            </div>
+
+            <img
+                class="about-image"
+                src="https://images.unsplash.com/photo-1593766827228-8737b7cd1472?auto=format&fit=crop&w=1200&q=85"
+                alt="Cricket ground"
+                loading="lazy"
+            >
+
+        </div>
+    </section>
+
+    <!-- Facilities -->
+
+    <section class="facilities" id="facilities">
+        <div class="container">
+
+            <div class="section-label">
+                Our Facilities
+            </div>
+
+            <h2>Everything for Your Next Game</h2>
+
+            <p class="section-description">
+                Contact us to confirm the available facilities
+                and ground booking options.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-icon">🏏</div>
+                    <h3>Cricket Matches</h3>
+                    <p>
+                        Enjoy friendly matches and team games
+                        with your cricket group.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Playing Surface</h3>
+                    <p>
+                        Contact us for details about the pitch
+                        and playing conditions.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💡</div>
+                    <h3>Evening Games</h3>
+                    <p>
+                        Ask about evening availability
+                        and lighting facilities.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🏆</div>
+                    <h3>Tournaments</h3>
+                    <p>
+                        Enquire about team events and
+                        tournament bookings.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📅</div>
+                    <h3>Booking Enquiries</h3>
+                    <p>
+                        Message us with your preferred date
+                        and time.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📍</div>
+                    <h3>Convenient Location</h3>
+                    <p>
+                        Find us near Paramount School,
+                        Aduru, Bengaluru.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Photo gallery -->
+
+    <section id="gallery">
+        <div class="container">
+
+            <div class="section-label">
+                Gallery
+            </div>
+
+            <h2>A Glimpse of Our Ground</h2>
+
+            <p class="section-description">
+                These are sample cricket images. Replace them
+                with actual photographs of NextPlay Cricket Ground.
+            </p>
+
+            <div class="gallery-grid">
+
+                <img
+                    src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&q=80"
+                    alt="Cricket ground view"
+                    loading="lazy"
+                >
+
+                <img
+                    src="https://images.unsplash.com/photo-1593766827228-8737b7cd1472?auto=format&fit=crop&w=800&q=80"
+                    alt="Cricket pitch"
+                    loading="lazy"
+                >
+
+                <img
+                    src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80"
+                    alt="Cricket stadium"
+                    loading="lazy"
+                >
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pricing -->
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+
+            <div class="section-label">
+                Pricing
+            </div>
+
+            <h2>Ground Rental Charges</h2>
+
+            <div class="price-box">
+
+                <div>
+                    <h3>Enquire About Our Rates</h3>
+
+                    <p>
+                        Contact us for current hourly rates,
+                        available slots and tournament packages.
+                    </p>
+                </div>
+
+                <a href="#" class="btn whatsapp-link">
+                    Ask for Pricing
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Booking section -->
+
+    <section class="booking">
+        <div class="container">
+
+            <h2>Ready to Play?</h2>
+
+            <p>
+                Send us your preferred date, time and booking
+                duration through WhatsApp. We will respond
+                to your enquiry about availability and pricing.
+            </p>
+
+            <a href="#" class="btn whatsapp-link">
+                💬 WhatsApp Booking Enquiry
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Contact section -->
+
+    <section id="contact">
+        <div class="container">
+
+            <div class="section-label">
+                Contact Us
+            </div>
+
+            <h2>Find NextPlay Cricket Ground</h2>
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+
+                    <h3>🏏 NextPlay Cricket Ground</h3>
+
+                    <p>
+                        📍 Near Paramount School,<br>
+                        Aduru, Bengaluru,<br>
+                        Karnataka - 560049
+                    </p>
+
+                    <h3 style="margin-top: 22px;">
+                        📞 Booking Enquiries
+                    </h3>
+
+                    <p class="contact-number">
+                        Contact Number 1:
+                        <a href="tel:9036527620">
+                            9036527620
+                        </a>
+                    </p>
+
+                    <p class="contact-number">
+                        Contact Number 2:
+                        <a href="tel:7353719953">
+                            7353719953
+                        </a>
+                    </p>
+
+                    <p>
+                        Call either number to enquire about
+                        ground availability, booking slots
+                        and pricing.
+                    </p>
+
+                    <div class="contact-buttons">
+
+                        <a
+                            href="tel:9036527620"
+                            class="btn btn-green">
+                            📞 Call 9036527620
+                        </a>
+
+                        <a
+                            href="tel:7353719953"
+                            class="btn btn-green">
+                            📞 Call 7353719953
+                        </a>
+
+                        <a
+                            href="#"
+                            class="btn whatsapp-link">
+                            💬 WhatsApp Enquiry
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <iframe
+                    class="map"
+                    title="Map showing NextPlay Cricket Ground area"
+                    src="https://maps.google.com/maps?q=Paramount%20School%2C%20Aduru%2C%20Bengaluru%2C%20Karnataka%20560049&output=embed"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- Floating WhatsApp button -->
+
+<a href="#" class="whatsapp-float whatsapp-link"
+   aria-label="WhatsApp booking enquiry">
+    💬 WhatsApp
+</a>
+
+<!-- Footer -->
+
+<footer>
+    <div class="container">
+        © <span id="year"></span>
+        NextPlay Cricket Ground. All rights reserved.
+    </div>
+</footer>
+
+<!-- WhatsApp configuration -->
+
+<script>
+
+    /*
+      IMPORTANT:
+      Replace 919876543210 with your actual WhatsApp number.
+
+      Use country code + mobile number.
+      Example format for India: 91XXXXXXXXXX
+
+      Do not include +, spaces or hyphens.
+    */
+
+    const WHATSAPP_NUMBER = "917868001670";
+
+    const MESSAGE =
+        "Hi NextPlay Cricket Ground! I would like to enquire about booking. Please share available dates, time slots and pricing.";
+
+    const WHATSAPP_URL =
+        "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        encodeURIComponent(MESSAGE);
+
+    document.querySelectorAll(".whatsapp-link").forEach(
+        function(button) {
+            button.href = WHATSAPP_URL;
+            button.target = "_blank";
+            button.rel = "noopener noreferrer";
+        }
+    );
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
+```
+
+</body>
+</html>
